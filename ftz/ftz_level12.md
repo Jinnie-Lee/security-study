@@ -4,11 +4,10 @@
 <br>
 
 **먼저 ```ls -l```을 이용해 어떤 파일이 있는지 살펴보자**<br> 
-
 attackme 프로그램에 level13의 권한으로 setuid가 걸려있는 것을 확인할 수 있다.<br><br>
 우선 hint의 내용을 보자<br>
 ```cat hint```<br>
-```
+```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

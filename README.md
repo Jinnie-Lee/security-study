@@ -1,2 +1,4 @@
 # security-study
 보안 공부하기
+
+- ftz 문제풀기

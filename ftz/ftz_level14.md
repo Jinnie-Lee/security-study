@@ -40,8 +40,7 @@ main()
 ```disas main```<br>
 
 <main+3>을 보면 0x38만큼의 공간을 만들고 있다. 0x38은 10진수로 56이다.<br>
-crap 변수 4bytes, check 변수 4byte, buf 20byte 총 28byte가 필요한데 56byte를 할당했다는 것은 <br>
-dummy로 28byte가 있다고 생각할 수 있다.<br>
+crap 변수 4bytes, check 변수 4byte, buf 20byte 총 28byte가 필요한데 56byte를 할당했다는 것은 dummy로 28byte가 있다고 생각할 수 있다.<br>
 dummy가 어디에 위치해 있는지 찾아봐야겠다.<br>
 <main+29>를 보면 0xdeadbeef랑 0xfffffff0를 비교하고 있다.<br>
 저 **0xfffffff0**이 바로 check의 주소인 것이다. 이는 ebp로부터 -16에 위치하고 있다.<br>

@@ -26,7 +26,7 @@ main()
 ```
 ```fgets``` 함수에서 BOF가 일어날 수 있다!!<br>
 그런데 fgets는 45byte만큼만 받고 있으며 check가 0xdeadbeef일 때 쉘을 얻을 수 있다.<br>
-45byte만 가지고 ret에 도달할 수 있을까?<br>
+45byte만 가지고 공격에 성공할 수 있을까?<br>
 
 우리의 목적을 생각해보자.<br>
 1. buf[20]에서 check까지, check에서 ret까지 거리 구하기
@@ -45,7 +45,7 @@ dummy가 어디에 위치해 있는지 찾아봐야겠다.<br>
 <main+29>를 보면 0xdeadbeef랑 0xfffffff0를 비교하고 있다.<br>
 저 **0xfffffff0**이 바로 check의 주소인 것이다. 이는 ebp로부터 -16에 위치하고 있다.<br>
 buf는 ebp로부터 -56에 위치하고있고 check는 -16에 위치하고 있으니<br>
-buf에서 check까지의 거리는 **40**이다.<br>
+buf에서 check까지의 거리는 **40**이다. *(45byte만으로 공격할 수 있다!)*<br>
 
 현재 상태를 나타내보면 다음과 같다.<br>
 **buf(20)+dummy(20)+check(4)+crap(4)+dummy(8)+sfp(4)+ret(4)**<br>

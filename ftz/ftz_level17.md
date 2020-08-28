@@ -34,7 +34,7 @@ Level16과 매우 비슷한데 shell 함수만 없다. 그러므로 환경변수
 3. 공격!
 
 buf에서 *call까지의 거리는 level16과 동일하므로 40이다<br>
-[ftz_level16.md 참고하기](https://github.com/white-bean/security-study/)
+[ftz_level16.md 참고하기](https://github.com/white-bean/security-study/blob/master/ftz/ftz_level16.md)
 
 이제 쉘 코드를 등록하고 주소를 찾아보자.<br>
 \x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x50\x53\x89\xe1\x89\xc2\xb0\x0b\xcd\x80<br>

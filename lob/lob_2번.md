@@ -1,7 +1,7 @@
 # LOB 2번
 
-#### ID : gremlin PW: hello bof world
-<br>
+#### ID : gremlin PW: hello bof world<br>
+
 **먼저 bash2에서 실행해야함을 기억하자** <br>
 
 우선 cobolt.c의 내용을 보자<br>

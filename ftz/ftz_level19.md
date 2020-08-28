@@ -52,7 +52,7 @@ attackme 파일을 tmp로 옮기고 디버깅을 해보자<br>
 gdb -q attackme
 set disassembly-flavor intel
 disas main
-```<br>
+```
 <main+9>를 보면 buf의 위치는 ebp로부터 40만큼 떨어져있다는 것을 알 수 있다.<br>
 따라서 sfp 4byte를 포함해 44byte를 채우고 쉘 코드 주소로 덮으면 된다.<br>
 

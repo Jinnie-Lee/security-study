@@ -1,7 +1,7 @@
 # LOB 1번
 
-#### ID : gate PW: gate
-<br>
+#### ID : gate PW: gate<br>
+**먼저 bash2에서 실행해야함을 기억하자** <br>
 
 우선 gremlin.c의 내용을 보자<br>
 ```cat gremlin.c```<br>

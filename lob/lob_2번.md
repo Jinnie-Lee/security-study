@@ -20,8 +20,8 @@ int main(int argc, char *argv[1])
       printf("%s\n", buffer);
 }
 ```
-버퍼의 크기가 16으로 작아졌을 뿐 lob 1번 문제와 유사하다.
-[LOB 1번 보기]()
+버퍼의 크기가 16으로 작아졌을 뿐 lob 1번 문제와 유사하다.<br>
+[LOB 1번 보기](https://github.com/white-bean/security-study/blob/master/lob/lob_1%EB%B2%88.md)
 
 우리의 목적을 생각해보자.<br>
 1. buffer 위치 구하기

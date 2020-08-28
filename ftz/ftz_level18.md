@@ -5,7 +5,7 @@
 
 우선 hint의 내용을 보자<br>
 ```cat hint```<br>
-이미지
+![level18_hint](https://user-images.githubusercontent.com/58061467/91567097-8a61b900-e97f-11ea-8c89-65ba97171030.png)
 
 
 ~~(코드가 매우 길다...)~~<br>
@@ -25,7 +25,7 @@ attackme 파일을 tmp로 옮기고 디버깅해보자<br>
 gdb -q attackme
 set disas intel
 disas main
-```<br>
+```
 
 <main+499>를 보면 string에서 ebp까지의 거리가 100인 것을 알 수 있고<br>
 <main+91>을 보면 check에서 ebp까지의 거리가 104인 것을 알 수 있다.<br>
